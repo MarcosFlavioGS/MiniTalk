@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 16:03:44 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/01/24 16:03:47 by mflavio-         ###   ########.fr       */
+/*   Created: 2022/09/27 00:17:58 by mflavio-          #+#    #+#             */
+/*   Updated: 2022/09/27 00:18:00 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "libft.h"
 
-int main(void)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
+	size_t	i;
 
+	i = 0;
+	if (size <= 0)
+		return (ft_strlen(src));
+	while (src[i] && i < size - 1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (ft_strlen(src));
 }

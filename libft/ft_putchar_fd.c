@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 16:03:56 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/01/24 16:10:30 by mflavio-         ###   ########.fr       */
+/*   Created: 2022/09/27 00:16:26 by mflavio-          #+#    #+#             */
+/*   Updated: 2022/09/27 00:16:28 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef minitalk_h
-# define minitalk_h
+#include "libft.h"
 
-# include "libft/libft.h"
-# include <signal.h>
-
-
-
-#endif
+int	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, sizeof(char));
+  return (1);
+}

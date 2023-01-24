@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 16:03:44 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/01/24 16:03:47 by mflavio-         ###   ########.fr       */
+/*   Created: 2022/09/27 00:14:58 by mflavio-          #+#    #+#             */
+/*   Updated: 2022/09/27 00:15:00 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "libft.h"
 
-int main(void)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
+	unsigned char	*sp;
+	size_t			i;
 
+	i = 0;
+	sp = (unsigned char *) s;
+	while (i < n)
+	{
+		if (*(sp + i) == (unsigned char) c)
+			return ((void *)(sp + i));
+		i++;
+	}
+	return (NULL);
 }

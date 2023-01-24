@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 16:03:56 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/01/24 16:10:30 by mflavio-         ###   ########.fr       */
+/*   Created: 2022/09/27 00:09:38 by mflavio-          #+#    #+#             */
+/*   Updated: 2022/09/27 00:09:41 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef minitalk_h
-# define minitalk_h
+#include "libft.h"
 
-# include "libft/libft.h"
-# include <signal.h>
-
-
-
-#endif
+int	ft_isalnum(int c)
+{
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90)
+		|| (c >= 97 && c <= 122))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}

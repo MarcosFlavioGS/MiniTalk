@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_numlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 16:03:56 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/01/24 16:10:30 by mflavio-         ###   ########.fr       */
+/*   Created: 2022/10/18 05:22:44 by mflavio-          #+#    #+#             */
+/*   Updated: 2022/10/21 03:12:17 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef minitalk_h
-# define minitalk_h
+int	ft_numlen(unsigned long int num)
+{
+	int	count;
 
-# include "libft/libft.h"
-# include <signal.h>
-
-
-
-#endif
+	count = 0;
+	if (num <= 0)
+		count++;
+	while (num != 0)
+	{
+		num = num / 10;
+		count++;
+	}
+	return (count);
+}
