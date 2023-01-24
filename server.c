@@ -6,7 +6,7 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 16:04:21 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/01/24 17:39:52 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/01/24 18:03:43 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int main(void)
 
     pid = getpid();
     ft_printf("Server PID: %d\n", pid);
+	ft_printf("Waiting for message...\n");
     while (1)
 	{
 		signal(SIGUSR1, handler);
