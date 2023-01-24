@@ -6,16 +6,13 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 16:03:56 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/01/24 17:23:36 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/01/24 18:32:11 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef minitalk_h
-# define minitalk_h
+#ifndef MINITALK_H
+# define MINITALK_H
 
 # include "libft/libft.h"
 # include <signal.h>
-
-
-
 #endif

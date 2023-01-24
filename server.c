@@ -6,15 +6,15 @@
 /*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 16:04:21 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/01/24 18:03:43 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/01/24 18:35:28 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void handler(int sig)
+void	handler(int sig)
 {
-   static int	bit;
+	static int	bit;
 	static int	i;
 
 	if (sig == SIGUSR1)
@@ -25,21 +25,21 @@ void handler(int sig)
 		ft_printf("%c", i);
 		bit = 0;
 		i = 0;
-	} 
+	}
 }
 
-int main(void)
+int	main(void)
 {
-    int pid;
+	int	pid;
 
-    pid = getpid();
-    ft_printf("Server PID: %d\n", pid);
+	pid = getpid();
+	ft_printf("Server PID: %d\n", pid);
 	ft_printf("Waiting for message...\n");
-    while (1)
+	while (1)
 	{
 		signal(SIGUSR1, handler);
 		signal(SIGUSR2, handler);
-        pause();
+		pause();
 	}
 	return (0);
 }
