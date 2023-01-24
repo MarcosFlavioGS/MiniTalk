@@ -1,6 +1,6 @@
 # minitalk 42
 
-### A simple program that demonstrates communication between two processes using the minitalk protocol.
+### A simple program that demonstrates communication between two processes.
 
 ###
 
@@ -9,7 +9,7 @@
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 Prerequisites
 
-    *GCC compiler*
+    GCC compiler
 
 ## Installing
 
