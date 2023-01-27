@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mflavio <mflavio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 16:04:21 by mflavio-          #+#    #+#             */
-/*   Updated: 2023/01/24 18:35:28 by mflavio-         ###   ########.fr       */
+/*   Updated: 2023/01/26 23:20:55 by mflavio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	handler(int sig)
 	bit++;
 	if (bit == 8)
 	{
-		ft_printf("%c", i);
+		ft_putchar_fd(i, 1);
 		bit = 0;
 		i = 0;
 	}
