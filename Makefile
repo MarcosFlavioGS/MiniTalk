@@ -6,7 +6,7 @@
 #    By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/24 16:03:35 by mflavio-          #+#    #+#              #
-#    Updated: 2023/01/28 12:46:35 by mflavio-         ###   ########.fr        #
+#    Updated: 2023/03/07 17:45:30 by mflavio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,6 @@ servp: LIB
 	gcc -o server $(FLAGS) $(SERVER) $(LIBFT)
 clientp: LIB
 	gcc -o client $(FLAGS) $(CLIENT) $(LIBFT)
-valgrind:
-	valgrind --leak-check=full --show-leak-kinds=all ./server
 clean:
 	@make -C libft/ clean
 
