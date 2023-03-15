@@ -3,29 +3,42 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+         #
+#    By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/24 16:03:35 by mflavio-          #+#    #+#              #
-#    Updated: 2023/03/07 17:45:30 by mflavio-         ###   ########.fr        #
+#    Updated: 2023/03/14 21:19:02 by mflavio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 LIBFT = libft/libft.a
 
+SERVER_NAME = server
+
+CLIENT_NAME = client
+
 SERVER = server.c
 
 CLIENT = client.c
 
+SERVER_O = $(SERVER:.c=.o)
+
+CLIENT_O = $(CLIENT:.c=.o)
+
 FLAGS = -Wall -Werror -Wextra
 
-all: LIB servp clientp
+all: $(SERVER_NAME) $(CLIENT_NAME)
 
-LIB: 
+$(SERVER_NAME): $(SERVER_O) $(LIBFT)
+	gcc $(FLAGS) $(SERVER_O) -o $(SERVER_NAME) $(LIBFT)
+
+$(CLIENT_NAME): $(CLIENT_O) $(LIBFT)
+	gcc $(FLAGS) $(CLIENT_O) -o $(CLIENT_NAME) $(LIBFT)
+
+$(CLIENT_O): $(CLIENT)
+	gcc $(FLAGS) -c $(CLIENT)
+
+$(LIBFT):
 	@make -C libft/
-servp: LIB
-	gcc -o server $(FLAGS) $(SERVER) $(LIBFT)
-clientp: LIB
-	gcc -o client $(FLAGS) $(CLIENT) $(LIBFT)
 clean:
 	@make -C libft/ clean
 
