@@ -6,7 +6,7 @@
 #    By: mflavio- <mflavio-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/24 16:03:35 by mflavio-          #+#    #+#              #
-#    Updated: 2023/03/14 21:19:02 by mflavio-         ###   ########.fr        #
+#    Updated: 2023/03/14 22:02:24 by mflavio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,8 @@ $(LIBFT):
 	@make -C libft/
 clean:
 	@make -C libft/ clean
+	@rm -rf $(SERVER_O)
+	@rm -rf $(CLIENT_O)
 
 fclean: clean
 	@make -C libft/ fclean
